@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/incognitochat/incognitochat/compare/v2.2.0...v2.2.1) (2026-11-14)
+
+
+### Bug Fixes
+
+* **media:** download links last one minute ([#114](https://github.com/incognitochat/incognitochat/issues/114)) ([6f8f000](https://github.com/incognitochat/incognitochat/commit/6f8f0005e8684f5f1019eb73a1e7009cf14c9c1b))
+
 ## [2.2.0](https://github.com/incognitochat/incognitochat/compare/v2.1.0...v2.2.0) (2026-11-14)
 
 
