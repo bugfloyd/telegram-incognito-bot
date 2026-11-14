@@ -54,7 +54,7 @@ func TestUploadURLSignsTheExactLengthAndType(t *testing.T) {
 
 func TestDownloadURL(t *testing.T) {
 	raw, err := newBucket().DownloadURL(context.Background(), "IDIDIDIDIDIDIDIDIDIDID")
-	if err != nil || !strings.Contains(raw, "/m/IDIDIDIDIDIDIDIDIDIDID?") || !strings.Contains(raw, "X-Amz-Expires=600") {
+	if err != nil || !strings.Contains(raw, "/m/IDIDIDIDIDIDIDIDIDIDID?") || !strings.Contains(raw, "X-Amz-Expires=60&") {
 		t.Fatalf("url = %s, %v", raw, err)
 	}
 }

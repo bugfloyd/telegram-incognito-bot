@@ -19,9 +19,13 @@ const (
 	// TokenBytes is how much one send token pays for: an upload costs one
 	// token per started 5 MiB.
 	TokenBytes = 5 << 20
-	// UploadURLTTL and DownloadURLTTL are how long presigned URLs work.
+	// UploadURLTTL and DownloadURLTTL are how long presigned URLs work. A
+	// download URL can be fetched any number of times while it lasts, and
+	// each fetch costs traffic, so it lasts only long enough to start: the
+	// app asks for one and fetches at once, and a download that has started
+	// goes on after its URL expires.
 	UploadURLTTL   = 15 * time.Minute
-	DownloadURLTTL = 10 * time.Minute
+	DownloadURLTTL = time.Minute
 	// Retention is how long an upload waits to be fetched: undelivered
 	// messages wait 30 days.
 	Retention = 31 * 24 * time.Hour
